@@ -1,10 +1,10 @@
 version: "3.4"
 services:
-  python: #docker run -it -v ${PWD}:/work -w /work -p 5003:5000 aimvector/python:1.0.0 /bin/sh
+  python: #docker run -it -v ${PWD}:/work -w /work -p 5003:5000 image/python:1.0.0 /bin/sh "or" docker run -d --name mycontainer2 -p 5003:5000 image/python:1.0.0
     container_name: python
-    image: aimvector/python:1.0.0
+    image: image/python:1.0.0
     build:
-      context: ./python
+      context: ./FASTAPI
       target: debug
     #working_dir: /work      #comment out for build.target:prod
     #entrypoint: /bin/sh     #comment out for build.target:prod
