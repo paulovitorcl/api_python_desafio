@@ -16,5 +16,8 @@ jobs:
       - name: Docker build Python
         run: |
           docker build ./FASTAPI -t image/python:1.0.0
+      - name: Docker push
+        run: |
+          docker push image/python:1.0.0
 
       
