@@ -49,6 +49,3 @@ def get_usuario_cpf(CPF_usuario: str):
 def insere_usuario(usuario: Usuario):
     base_de_dados.append(usuario) 
     return usuario
-    
-
-    
